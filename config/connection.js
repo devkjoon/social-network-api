@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongob://localhost:27017/social-network",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/social-network";
+
+mongoose.connect(mongoURI, {
+  useNewURLParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log("Connected to database");
+}).catch((error) => {
+  console.log(`Error connecting to database: ${error.message}`);
+});
 
 mongoose.set("debug", true);
 
