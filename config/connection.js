@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
-const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/social-network";
+const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/social-network-api";
 
+mongoose.set("strictQuery", false);
 mongoose.connect(mongoURI, {
   useNewURLParser: true,
   useUnifiedTopology: true,
