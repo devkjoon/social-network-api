@@ -43,7 +43,8 @@ To run this application:
 - WHEN I test API POST and DELETE routes in Insomnia
 - THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user's friend list
 
-`BONUS` 
+## Bonus
+
 - WHEN I delete a user
 - THEN all associated thoughts and reactions are removed as well
 
